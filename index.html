@@ -11,13 +11,25 @@
         <h2 id = "hi"> 올 때 메로나 </h2>
 
         <!-- UI만들기: 미리 디자인해놓고 숨김, 버튼 누르면 보여줌 -->
-        <div class = "alert-box" id="alert">Alert 박스</div>
-        <button onclick="document.getElementById('alert').style.display = 'block';">버튼</button>
-        <button onclick="document.getElementById('alert').style.display = 'none'; ">닫기</button>
+        <div class = "alert-box" id="alert">
+            <p>Alert 박스</p>
+            <button onclick="noti_close(); ">닫기</button>    
+        </div>
+        <button onclick="noti_open();">버튼</button>
+        
 
         <!---html 변경-->
         <!--document.getElementById(?) : selector-->
         <script>
+
+            function noti_open(){
+                document.getElementById('alert').style.display = 'block';
+            }
+
+            function noti_close(){
+                document.getElementById('alert').style.display = 'none';
+            }
+
             document.getElementById('hello').innerHTML ='안녕';
             document.getElementById('hello').style.color ='pink';
             document.getElementById('hi').style.color ='skyblue';
