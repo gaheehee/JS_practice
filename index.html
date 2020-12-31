@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title> Document </title>
+        <link rel = "stylesheet" href = "main.css">
+    </head>
+    <body>
+
+        <h2 id = "hello"> 안녕하세요 </h2>
+        <h2 id = "hi"> 올 때 메로나 </h2>
+
+        <!-- UI만들기: 미리 디자인해놓고 숨김, 버튼 누르면 보여줌 -->
+        <div class = "alert-box" id="alert">Alert 박스</div>
+        <button onclick="document.getElementById('alert').style.display = 'block';">버튼</button>
+        <button onclick="document.getElementById('alert').style.display = 'none'; ">닫기</button>
+
+        <!---html 변경-->
+        <!--document.getElementById(?) : selector-->
+        <script>
+            document.getElementById('hello').innerHTML ='안녕';
+            document.getElementById('hello').style.color ='pink';
+            document.getElementById('hi').style.color ='skyblue';
+            document.getElementById('hello').style.fontSize = '50px';
+        </script>
+
+    </body>
+</html>
